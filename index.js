@@ -27,6 +27,7 @@ const registrationSchema = new mongoose.Schema({
 const registration = mongoose.model("registration", registrationSchema);
 app.use(bodyParser.urlencoded ({ extended : true}));
 app.use(bodyParser.json());
+app.use(express.static('frontend'))
 
 app.get("/", (req,res) => {
     res.sendFile(__dirname + "/frontend/index.html")
