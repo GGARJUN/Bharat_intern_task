@@ -1,8 +1,10 @@
 
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display&family=Poppins:wght@400;500;600;700;800;900&display=swap');
-font-family: 'DM Mono', monospace;
-font-family: 'DM Serif Display', serif;
-font-family: 'Poppins', sans-serif;
+font{
+  font-family: 'DM Mono', monospace;
+  font-family: 'DM Serif Display', serif;
+  font-family: 'Poppins', sans-serif;
+}
 *{
     margin: 0%;
     padding: 0%;
@@ -10,14 +12,19 @@ font-family: 'Poppins', sans-serif;
 }
 
 body{
+   
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+    background: url('../download.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: 'DM Mono', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 
@@ -32,10 +39,10 @@ h1{
 
 form{
   border-radius: 20px;
-  background-image: linear-gradient(-45deg, #ffc796b4 0%, #ff6b95bd 100%);
+  background-image: linear-gradient(-45deg, #ffc7963b 0%, #ff6b9541 100%);
  
   width: 560px;
-  height: 620px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,75 +98,34 @@ form{
   }
 
   button {
-    position: relative;
-    padding: 20px 30px;
-    border-radius: 7px;
-    border: 1px solid rgb(61, 106, 255);
+    padding: 1.3em 3em;
     font-size: 18px;
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-    background: transparent;
-    color: #40407a;
-    overflow: hidden;
-    box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
   }
   
   button:hover {
-    background: rgb(61, 106, 255);
-    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-  
-  button:hover::before {
-    -webkit-animation: sh02 0.5s 0s linear;
-    -moz-animation: sh02 0.5s 0s linear;
-    animation: sh02 0.5s 0s linear;
-  }
-  
-  button::before {
-    content: '';
-    display: block;
-    width: 0px;
-    height: 86%;
-    position: absolute;
-    top: 7%;
-    left: 0%;
-    opacity: 0;
-    background: #40407a;
-    box-shadow: 0 0 50px 30px #40407a;
-    -webkit-transform: skewX(-20deg);
-    -moz-transform: skewX(-20deg);
-    -ms-transform: skewX(-20deg);
-    -o-transform: skewX(-20deg);
-    transform: skewX(-20deg);
-  }
-  
-  @keyframes sh02 {
-    from {
-      opacity: 0;
-      left: 0%;
-    }
-  
-    50% {
-      opacity: 1;
-    }
-  
-    to {
-      opacity: 0;
-      left: 100%;
-    }
+    background-color: #0c70e2;
+    box-shadow: 0px 15px 20px rgba(46, 58, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
   }
   
   button:active {
-    box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: box-shadow 0.2s ease-in;
-    -moz-transition: box-shadow 0.2s ease-in;
-    transition: box-shadow 0.2s ease-in;
+    transform: translateY(-1px);
   }
   
+
+  input[type=email] {
+    background-color: transparent;
+    
+  }
