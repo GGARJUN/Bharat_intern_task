@@ -13,25 +13,32 @@
   </head>
   <body
   >
-    <style>
-      /* Apply glassmorphism effect to the container */
-      .container {
-        background: rgba(255, 255, 255, 0.655); /* Set a semi-transparent white background */
-        backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-        border-radius:15px; /* Rounded corners */
-        padding: 30px;
-        text-align: center;
-      }
+  <style>
+    /* Apply glassmorphism effect to the container */
+    .container {
+      /* Set a semi-transparent white background */
+      backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+      border-radius:15px; /* Rounded corners */
+      padding: 30px;
+      text-align: center;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 
-      /* Center the container vertically and horizontally */
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Ensure full viewport height */
-        background-color: rgb(188, 188, 188);
-      }
-    </style>
+    }
+
+    /* Center the container vertically and horizontally */
+    body {
+      height: 100vh;
+  width: 100vw;
+  background: url('./download.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Ensure full viewport height */
+      background-color: rgba(233, 233, 233, 0.438);
+    }
+  </style>
     <div class="container">
       <h1>Registration Error</h1>
       <p>There was an error during registration. Please try again.</p>
