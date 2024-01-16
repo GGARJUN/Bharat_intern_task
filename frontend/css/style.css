@@ -1,3 +1,8 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+font-family: 'DM Mono', monospace;
+font-family: 'DM Serif Display', serif;
+font-family: 'Poppins', sans-serif;
 *{
     margin: 0%;
     padding: 0%;
@@ -7,45 +12,61 @@
 body{
     height: 100vh;
     width: 100vw;
-  background-color: rgba(19, 4, 4, 0.925);
-}
-
-
-h1{
-    color: red;
-    font-size: 50px;
-    padding-bottom: 50px;
-}
-
-form{
+    background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+    font-family: 'DM Mono', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+}
+
+
+h1{
+    color: #130f40;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 40px;
+    font-family: 'DM Mono', monospace;
+}
+
+form{
+  border-radius: 20px;
+  background-image: linear-gradient(-45deg, #ffc796b4 0%, #ff6b95bd 100%);
+ 
+  width: 560px;
+  height: 620px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+
 }
 .form-control {
     position: relative;
     margin: 0px 0 40px;
-    width: 300px;
+    width: 350px;
+    background-color: transparent;
   }
   
   .form-control input {
     background-color: transparent;
     border: 0;
-    border-bottom: 2px #fff solid;
+    border-bottom: 3px #40407a solid;
     display: block;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
     font-size: 24px;
-    color: #fff;
+    color: #40407a;
+
   }
   
   .form-control input:focus,
   .form-control input:valid {
     outline: 0;
-    border-bottom-color: lightblue;
+    border-bottom-color: #2c2c54;
   }
   
   .form-control label {
@@ -59,13 +80,13 @@ form{
     display: inline-block;
     font-size: 28px;
     min-width: 5px;
-    color: #fff;
+    color: #40407a;
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
   .form-control input:focus+label span,
   .form-control input:valid+label span {
-    color: lightblue;
+    color: #2c2c54;
     transform: translateY(-30px);
   }
 
@@ -79,7 +100,7 @@ form{
     font-weight: 600;
     letter-spacing: 2px;
     background: transparent;
-    color: #fff;
+    color: #40407a;
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: all 0.2s ease-in;
@@ -110,8 +131,8 @@ form{
     top: 7%;
     left: 0%;
     opacity: 0;
-    background: #fff;
-    box-shadow: 0 0 50px 30px #fff;
+    background: #40407a;
+    box-shadow: 0 0 50px 30px #40407a;
     -webkit-transform: skewX(-20deg);
     -moz-transform: skewX(-20deg);
     -ms-transform: skewX(-20deg);
