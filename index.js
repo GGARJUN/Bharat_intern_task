@@ -6,17 +6,25 @@ const bodyParser = require("body-parser");
 
 const app =express();
 dotenv.config();
+app.use(bodyParser.urlencoded ({ extended : true}));
+app.use(bodyParser.json());
+app.use(express.static('frontend'))
 
 const port = process.env.PORT || 8000;
 
 
-const username = process.env.MONGODB_USERNAME;
-const password = process.env.MONGODB_PASSWORD;
+//const username = process.env.MONGODB_USERNAME;
+//const password = process.env.MONGODB_PASSWORD;
 
-mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.sc79qgz.mongodb.net/registrationFormDB` ,{
-    useNewUrlParser : true,
-    useUnifiedTopology : true
-});
+//mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.sc79qgz.mongodb.net/registrationFormDB` ,{
+  //  useNewUrlParser : true,
+    //useUnifiedTopology : true
+//});
+mongoose.connect('mongodb://0.0.0.0/Arjun')
+var db=mongoose.connection
+db.on('error',()=> console.log("Error in Connecting to Database"))
+db.once('open',()=> console.log("Connected to Database"))
+
 
 const registrationSchema = new mongoose.Schema({
     name : String,
@@ -25,9 +33,7 @@ const registrationSchema = new mongoose.Schema({
 });
 
 const registration = mongoose.model("registration", registrationSchema);
-app.use(bodyParser.urlencoded ({ extended : true}));
-app.use(bodyParser.json());
-app.use(express.static('frontend'))
+
 
 app.get("/", (req,res) => {
     res.sendFile(__dirname + "/frontend/index.html")
